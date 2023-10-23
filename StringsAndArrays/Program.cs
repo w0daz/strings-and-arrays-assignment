@@ -24,21 +24,36 @@
 
             Console.Write("Please enter your name: ");
             // 2.1 Get the input from and assing it into new string variable called name
+            string name = Console.ReadLine();
 
             // 2.2 Print a personalized welcome message including the name.
+            Console.WriteLine("Welcome back," + name);
 
             // 2.3 Convert name variable to uppercase and output the result
-
+            Console.WriteLine(name.ToUpper());
+            
             // 2.4 Convert name variable to lovercase and output the result
+            Console.WriteLine(name.ToLower());
 
             // 3. String Searching
             // 3.1 Create new boolean variable called containsWorld
+            bool containsWorld;
 
             // 3.2 Check that the helloWorld variable contains the word "World".
             //     Assign the result to the created constainsWorld variable
+            containsWorld = helloWorld.Contains("World");
 
             // 3.3 If the word is found, get the index of the word from helloWorld string
+            int indexOfWorld = helloWorld.IndexOf("World");
 
+            if (containsWorld)
+            {
+                Console.WriteLine($"The word 'World' was found at index {indexOfWorld} in the helloWorld string.");
+            }
+            else
+            {
+                Console.WriteLine("The word 'World' was not found in the helloWorld string.");
+            }
 
             // PART 2: Arrays
 
